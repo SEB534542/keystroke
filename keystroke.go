@@ -11,6 +11,7 @@ import (
 const interval = 180 * time.Second
 
 func main() {
+	log.Println("Pressing control button every", interval)
 	kb, err := keybd_event.NewKeyBonding()
 	if err != nil {
 		panic(err)
