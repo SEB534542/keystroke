@@ -31,14 +31,14 @@ func main() {
 	// Press the selected keys
 	for i := 1; true; i++ {
 		log.Println("Round", i)
-		err = kb.Launching()
-		if err != nil {
-			panic(err)
-		}
+		kb.Press()
+		time.Sleep(10 * time.Millisecond)
+		kb.Release()
 		time.Sleep(interval)
 	}
-	// Or you can use Press and Release
-	// kb.Press()
-	// time.Sleep(10 * time.Millisecond)
-	// kb.Release()
+	// Or use launch, to launch the keys
+	// err = kb.Launching()
+	// if err != nil {
+	// 	panic(err)
+	// }
 }
