@@ -9,7 +9,7 @@ import (
 )
 
 const interval = 180 * time.Second
-const key = "shift
+const key = "shift"
 
 func main() {
 	log.Printf("Pressing %v button every %v", key, interval)
